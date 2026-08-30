@@ -3,27 +3,14 @@
 import React from 'react';
 import { urlFor } from '@/lib/sanity';
 
-const DEFAULT_PARTNERS = [
-  {
-    id: 'p1',
-    name: 'Poweron AS',
-    code: 'PRT-NOR-01',
-    country: 'Norway',
-    tag: 'RAIL_INFRASTRUCTURE',
-    url: 'https://www.poweron.no',
-  },
-  {
-    id: 'p2',
-    name: 'Flatt Consulting',
-    code: 'PRT-UK-02',
-    country: 'United Kingdom',
-    tag: 'MEP_ENGINEERING_CONSULTANCY',
-    url: 'https://flattconsulting.com',
-  },
-];
+export default function PartnerLogos({ logos = [] }) {
+  // Only render if there are partner items configured
+  const partnersList = logos && logos.length > 0 ? logos : [];
 
-export default function PartnerLogos({ logos }) {
-  const partnersList = logos && logos.length > 0 ? logos : DEFAULT_PARTNERS;
+  if (partnersList.length === 0) {
+    return null;
+  }
+
   const isTwoPartners = partnersList.length <= 2;
 
   return (
@@ -39,11 +26,11 @@ export default function PartnerLogos({ logos }) {
             <span>International Engineering Collaborations & Partner Network</span>
           </div>
           <span className="font-label-mono text-[10px] text-outline opacity-70">
-            NETWORK // ACTIVE (NORWAY &amp; UK)
+            NETWORK // ACTIVE
           </span>
         </div>
 
-        {/* Real Logo Partner Cards (§23 / Section 17) */}
+        {/* Real Logo Partner Cards */}
         <div
           className={
             isTwoPartners
@@ -68,7 +55,7 @@ export default function PartnerLogos({ logos }) {
 
             const isPoweron = partner.name?.toLowerCase().includes('poweron');
             const isFlatt = partner.name?.toLowerCase().includes('flatt');
-            const countryLabel = partner.country || (isPoweron ? 'Norway' : isFlatt ? 'United Kingdom' : 'International');
+            const countryLabel = partner.country || (isPoweron ? 'Norway' : isFlatt ? 'United Kingdom' : 'Partner Network');
             const domainLabel = partner.url ? partner.url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '') : '';
 
             return (
@@ -91,7 +78,7 @@ export default function PartnerLogos({ logos }) {
                   </span>
                 </div>
 
-                {/* Center: Real Logo with object-contain & no cropping */}
+                {/* Center: Uploaded Logo Image with object-contain */}
                 <div className="my-sm flex flex-col items-center justify-center text-center w-full flex-grow py-xs">
                   {logoSrc ? (
                     <div className="w-full h-16 md:h-20 flex items-center justify-center px-sm">
