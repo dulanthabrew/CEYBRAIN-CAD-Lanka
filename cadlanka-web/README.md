@@ -38,3 +38,9 @@ npm run dev
 - `/about`: Company story (established in 2014), 5 approach pillars, CAD/BIM software capabilities, and Norwegian/UK international collaboration network.
 - `/contact`: Direct inquiry form with Resend email delivery and verified contact details.
 - `/studio`: Embedded Sanity Studio for full content management.
+
+---
+
+## 📖 Client CMS User Guide
+For instructions on managing content, publishing projects, and inviting team members to Sanity Studio, see [CLIENT_USER_GUIDE.md](./CLIENT_USER_GUIDE.md).
+
