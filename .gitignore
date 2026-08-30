@@ -1,0 +1,56 @@
+# Dependencies
+node_modules/
+*/node_modules/
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# Next.js build output
+.next/
+*/.next/
+out/
+*/out/
+build/
+*/build/
+
+# Environment files — NEVER commit secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+*.env
+
+# Operating System & IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Debug & logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Vercel
+.vercel/
+*/.vercel/
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Internal design specifications, IDE build instructions & reference mockups
+instructions/
+resources/
+DESIGN.md
+
+# Development-only scripts and testing routes (excluded from handover)
+cadlanka-web/scripts/
+scripts/
+cadlanka-web/app/dev/
+app/dev/
