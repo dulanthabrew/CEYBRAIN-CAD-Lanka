@@ -57,6 +57,7 @@ export default {
       description: 'Upload client/partner logos to display on the trust strip. Uses generic placeholders if empty.',
       of: [
         {
+          name: 'partnerItem',
           type: 'object',
           fields: [
             { name: 'name', title: 'Partner / Client Name', type: 'string' },
