@@ -25,9 +25,35 @@ export async function generateMetadata({ params }) {
     const { slug } = await params;
     const project = await getProjectBySlug(slug);
     if (!project) return { title: 'Project Not Found' };
+    
+    const desc = project.description?.slice(0, 160) || `${project.title} — Technical railway and CAD engineering deliverable by CAD Lanka Engineering.`;
+    let ogImages = [];
+    if (project.coverImage) {
+      try {
+        ogImages.push({
+          url: urlFor(project.coverImage).width(1200).height(630).fit('crop').url(),
+          width: 1200,
+          height: 630,
+          alt: project.title,
+        });
+      } catch {}
+    }
+
     return {
       title: project.title,
-      description: project.description?.slice(0, 160) || `${project.title} — CAD Lanka Engineering project.`,
+      description: desc,
+      openGraph: {
+        title: `${project.title} | CAD Lanka Engineering`,
+        description: desc,
+        type: 'article',
+        images: ogImages,
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: project.title,
+        description: desc,
+        images: ogImages.map((img) => img.url),
+      },
     };
   } catch {
     return { title: 'Project' };
