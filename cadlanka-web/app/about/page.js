@@ -187,7 +187,7 @@ export default async function AboutPage() {
                     </span>
                     <h2 className="font-headline-md text-headline-md text-primary">Structural Integrity Since 2014</h2>
                   </div>
-                  <span className="font-label-mono text-label-mono text-outline border border-surface-variant px-sm py-xs bg-surface flex-shrink-0">
+                  <span className="font-label-mono text-label-mono text-secondary font-bold border border-secondary/30 px-sm py-xs bg-surface-container-low flex-shrink-0">
                     REF_EST: 2014
                   </span>
                 </div>
@@ -200,7 +200,7 @@ export default async function AboutPage() {
                   <div className="flex flex-col gap-xs">
                     <div className="flex items-center gap-xs">
                       <div className="w-2 h-2 rounded-full bg-secondary-container flex-shrink-0" />
-                      <span className="font-label-mono text-label-mono text-primary font-bold">PHASE 01 // FOUNDATION</span>
+                      <span className="font-label-mono text-label-mono text-secondary font-bold">PHASE 01 // FOUNDATION</span>
                     </div>
                     <p className="font-body-sm text-body-sm text-on-surface-variant">
                       Specialized drafting and microfiche vectorization delivering exact CAD deliverables for local and regional industry.
@@ -209,7 +209,7 @@ export default async function AboutPage() {
                   <div className="flex flex-col gap-xs">
                     <div className="flex items-center gap-xs">
                       <div className="w-2 h-2 rounded-full border border-secondary-container flex-shrink-0" />
-                      <span className="font-label-mono text-label-mono text-outline">PHASE 02 // GLOBAL EXPANSION</span>
+                      <span className="font-label-mono text-label-mono text-secondary font-bold">PHASE 02 // GLOBAL EXPANSION</span>
                     </div>
                     <p className="font-body-sm text-body-sm text-on-surface-variant">
                       Scaling into railway electrification (OLE) and MEP BIM coordination for engineering firms in Norway and the UK.
@@ -253,7 +253,7 @@ export default async function AboutPage() {
                     To become a trusted engineering design, CAD and BIM service partner for companies in Norway, Sri Lanka and international markets, delivering reliable technical solutions and high-quality engineering documentation.
                   </p>
                 </div>
-                <div className="mt-md font-label-mono text-[10px] text-outline uppercase tracking-wider">
+                <div className="mt-md font-label-mono text-[10px] text-secondary font-bold uppercase tracking-wider">
                   HORIZON // INTERNATIONAL PARTNERSHIP
                 </div>
               </div>
@@ -269,8 +269,8 @@ export default async function AboutPage() {
                     Our mission is to provide accurate, efficient and professional engineering drawing and modelling services that help our clients reduce design challenges, improve coordination and deliver projects successfully.
                   </p>
                 </div>
-                <div className="mt-md font-label-mono text-[10px] text-outline uppercase tracking-wider">
-                  STANDARD // ZERO-ERROR EXECUTION
+                <div className="mt-md font-label-mono text-[10px] text-secondary font-bold uppercase tracking-wider">
+                  MANDATE // ENGINEERING PRECISION
                 </div>
               </div>
             </ScrollReveal>

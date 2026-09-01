@@ -20,7 +20,7 @@ export default function SectionHeading({
           <span className="w-8 h-px bg-outline block flex-shrink-0" />
           {eyebrow}
           {refCode && (
-            <span className="ml-auto font-label-mono text-label-mono text-outline hidden md:block">
+            <span className="ml-auto font-label-mono text-label-mono text-secondary font-bold hidden md:block">
               {refCode}
             </span>
           )}

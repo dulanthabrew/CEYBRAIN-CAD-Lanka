@@ -59,7 +59,7 @@ function StatItem({ targetValue, suffix = '', label, refCode, delay = 0 }) {
       ref={containerRef}
       className="py-md md:py-lg flex flex-col items-center justify-center text-center relative"
     >
-      <span className="absolute top-sm right-sm font-label-mono text-label-mono text-outline-variant/50 hidden md:block text-[10px]">
+      <span className="absolute top-sm right-sm font-label-mono text-label-mono text-secondary font-bold hidden md:block text-[10px]">
         {refCode}
       </span>
       <span className="font-headline-md text-headline-md text-primary mb-xs">

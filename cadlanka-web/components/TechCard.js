@@ -21,7 +21,7 @@ export default function TechCard({
       {...props}
     >
       {refCode && (
-        <span className="absolute top-md right-md font-label-mono text-label-mono text-outline select-none">
+        <span className="absolute top-md right-md font-label-mono text-label-mono text-secondary font-bold select-none">
           {refCode}
         </span>
       )}

@@ -140,7 +140,7 @@ export default async function ServicesPage() {
                     <div className={`p-lg md:w-1/2 flex flex-col justify-center border-b md:border-b-0 ${isEven ? 'md:border-r' : 'md:border-l'} border-outline-variant`}>
                       <div className="flex items-center justify-between mb-md">
                         <div className="text-secondary">{icon}</div>
-                        <span className="font-label-mono text-label-mono text-outline">REF: {ref}</span>
+                        <span className="font-label-mono text-label-mono text-secondary font-bold">REF: {ref}</span>
                       </div>
                       <h2 id={`service-${ref}`} className="font-headline-md text-headline-md text-primary mb-xs">
                         {service.title}
@@ -174,7 +174,7 @@ export default async function ServicesPage() {
                         role="img"
                         aria-label={`${service.title} technical illustration`}
                       />
-                      <div className="absolute bottom-sm right-sm bg-surface-container-lowest/90 backdrop-blur-sm border border-outline px-sm py-xs font-label-mono text-label-mono text-outline text-[10px]">
+                      <div className="absolute bottom-sm right-sm bg-surface-container-lowest/90 backdrop-blur-sm border border-secondary/40 px-sm py-xs font-label-mono text-label-mono text-secondary font-bold text-[10px]">
                         {`${ref} // SPEC_ACTIVE`}
                       </div>
                     </div>

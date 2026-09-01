@@ -33,21 +33,21 @@
 
 /* ── Utility Classes ─────────────────────────────────────────────────────── */
 @layer utilities {
-  /* Blueprint grid background (32px, subtle gridlines) */
+  /* Blueprint grid background with theme safety orange gridlines (#fe6b00) */
   .bg-blueprint {
     background-color: #f8f9fb;
     background-image:
-      linear-gradient(rgba(209, 213, 219, 0.35) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(209, 213, 219, 0.35) 1px, transparent 1px);
+      linear-gradient(rgba(254, 107, 0, 0.16) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(254, 107, 0, 0.16) 1px, transparent 1px);
     background-size: 32px 32px;
   }
 
-  /* Blueprint grid on dark backgrounds */
+  /* Blueprint grid on dark backgrounds with theme safety orange gridlines */
   .bg-blueprint-dark {
     background-color: #051625;
     background-image:
-      linear-gradient(rgba(255,255,255, 0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255, 0.04) 1px, transparent 1px);
+      linear-gradient(rgba(254, 107, 0, 0.22) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(254, 107, 0, 0.22) 1px, transparent 1px);
     background-size: 32px 32px;
   }
 
@@ -70,7 +70,7 @@
   /* Dimension line — horizontal technical separator with tick marks */
   .dimension-line {
     position: relative;
-    border-top: 1px solid #74777c;
+    border-top: 1px solid rgba(254, 107, 0, 0.4);
   }
   .dimension-line::before,
   .dimension-line::after {
@@ -79,7 +79,7 @@
     top: -4px;
     width: 1px;
     height: 9px;
-    background-color: #74777c;
+    background-color: #fe6b00;
   }
   .dimension-line::before { left: 0; }
   .dimension-line::after { right: 0; }
@@ -87,7 +87,7 @@
   /* Vertical dimension line */
   .dimension-line-v {
     position: relative;
-    border-left: 1px solid #74777c;
+    border-left: 1px solid rgba(254, 107, 0, 0.4);
   }
   .dimension-line-v::before,
   .dimension-line-v::after {
@@ -96,7 +96,7 @@
     left: -4px;
     height: 1px;
     width: 9px;
-    background-color: #74777c;
+    background-color: #fe6b00;
   }
   .dimension-line-v::before { top: 0; }
   .dimension-line-v::after { bottom: 0; }
@@ -106,16 +106,16 @@
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, transform 0.15s ease-in-out;
   }
   .tech-card:hover {
-    border-color: #051625;
-    box-shadow: 4px 4px 0px 0px rgba(5, 22, 37, 0.10);
+    border-color: #fe6b00;
+    box-shadow: 4px 4px 0px 0px rgba(254, 107, 0, 0.18);
     transform: translate(-1px, -1px);
   }
 
-  /* Blueprint dot overlay */
+  /* Blueprint dot overlay in theme safety orange */
   .blueprint-overlay {
-    background-image: radial-gradient(#a04100 1px, transparent 1px);
-    background-size: 8px 8px;
-    opacity: 0.05;
+    background-image: radial-gradient(#fe6b00 1px, transparent 1px);
+    background-size: 16px 16px;
+    opacity: 0.12;
   }
 
   /* Engineering corner brackets (decorative) */
@@ -132,14 +132,14 @@
   .corner-bracket::before {
     top: -1px;
     left: -1px;
-    border-top: 2px solid #051625;
-    border-left: 2px solid #051625;
+    border-top: 2px solid #fe6b00;
+    border-left: 2px solid #fe6b00;
   }
   .corner-bracket::after {
     bottom: -1px;
     right: -1px;
-    border-bottom: 2px solid #051625;
-    border-right: 2px solid #051625;
+    border-bottom: 2px solid #fe6b00;
+    border-right: 2px solid #fe6b00;
   }
 
   /* Nav active state underline */

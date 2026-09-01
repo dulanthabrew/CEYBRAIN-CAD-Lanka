@@ -45,8 +45,8 @@ export default async function ContactPage() {
               ]}
             />
             <div className="mt-md">
-              <div className="flex items-center gap-sm font-label-mono text-label-mono text-outline uppercase tracking-widest mb-sm">
-                <span className="w-8 h-px bg-outline block" />
+              <div className="flex items-center gap-sm font-label-mono text-label-mono text-secondary uppercase tracking-widest mb-sm font-bold">
+                <span className="w-8 h-px bg-secondary block" />
                 Direct Inquiry
               </div>
               <h1 className="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-md">
@@ -70,7 +70,7 @@ export default async function ContactPage() {
               <div className="bg-surface-container-lowest border border-outline-variant rounded p-lg">
                 <div className="flex justify-between items-start mb-md">
                   <h2 className="font-headline-sm text-headline-sm text-primary">Headquarters</h2>
-                  <span className="font-label-mono text-label-mono text-outline">HQ-01</span>
+                  <span className="font-label-mono text-label-mono text-secondary font-bold">HQ-01</span>
                 </div>
                 <div className="dimension-line mb-md" />
                 <div className="flex flex-col gap-md font-body-sm text-body-sm text-on-surface-variant">
@@ -125,7 +125,7 @@ export default async function ContactPage() {
               <div className="bg-surface-container-lowest border border-outline-variant rounded p-lg">
                 <div className="flex justify-between items-start mb-md">
                   <h2 className="font-headline-sm text-headline-sm text-primary">Global Network</h2>
-                  <span className="font-label-mono text-label-mono text-outline">NET-02</span>
+                  <span className="font-label-mono text-label-mono text-secondary font-bold">NET-02</span>
                 </div>
                 <div className="dimension-line mb-md" />
                 <ul className="flex flex-col gap-sm">
@@ -176,7 +176,7 @@ export default async function ContactPage() {
                     Describe your project requirements and we&apos;ll respond with a tailored proposal.
                   </p>
                 </div>
-                <span className="font-label-mono text-label-mono text-outline hidden md:block">REF: CL-CI-24</span>
+                <span className="font-label-mono text-label-mono text-secondary font-bold hidden md:block">REF: CL-CI-24</span>
               </div>
               <div className="dimension-line mb-lg" />
               <ContactForm />

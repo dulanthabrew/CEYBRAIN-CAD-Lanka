@@ -153,8 +153,8 @@ export default async function HomePage() {
             {/* Section header */}
             <div className="flex justify-between items-end mb-lg border-b border-outline-variant pb-md">
               <div>
-                <div className="flex items-center gap-sm font-label-mono text-label-mono text-outline uppercase tracking-widest mb-sm">
-                  <span className="w-8 h-px bg-outline block" />
+                <div className="flex items-center gap-sm font-label-mono text-label-mono text-secondary uppercase tracking-widest mb-sm font-bold">
+                  <span className="w-8 h-px bg-secondary block" />
                   Service Portfolio
                 </div>
                 <h2 id="services-heading" className="font-headline-md text-headline-md text-primary">Core Services</h2>
@@ -162,7 +162,7 @@ export default async function HomePage() {
                   Technical capabilities and drafting solutions for railway, MEP, and infrastructure sectors.
                 </p>
               </div>
-              <span className="font-label-mono text-label-mono text-outline hidden md:block">SEC: 02 // SRV</span>
+              <span className="font-label-mono text-label-mono text-secondary font-bold hidden md:block">SEC: 02 // SRV</span>
             </div>
 
             {/* 5-item grid: 2-per-row with the 5th item centered cleanly per §22.2 */}
@@ -181,7 +181,7 @@ export default async function HomePage() {
                             {service.icon}
                           </div>
                           <div className="flex flex-col items-end">
-                            <span className="font-label-mono text-label-mono text-outline">{service.id}</span>
+                            <span className="font-label-mono text-label-mono text-secondary font-bold">{service.id}</span>
                             <span className="font-label-mono text-[10px] text-secondary font-bold">{service.refCode}</span>
                           </div>
                         </div>
@@ -256,8 +256,8 @@ export default async function HomePage() {
               {/* Left — info */}
               <div className="flex flex-col gap-lg">
                 <div>
-                  <div className="flex items-center gap-sm font-label-mono text-label-mono text-outline uppercase tracking-widest mb-sm">
-                    <span className="w-8 h-px bg-outline block" />
+                  <div className="flex items-center gap-sm font-label-mono text-label-mono text-secondary uppercase tracking-widest mb-sm font-bold">
+                    <span className="w-8 h-px bg-secondary block" />
                     Get in Touch
                   </div>
                   <h2 id="home-contact-heading" className="font-headline-md text-headline-md text-primary mb-md">
@@ -311,7 +311,7 @@ export default async function HomePage() {
                         {item.icon}
                       </div>
                       <div>
-                        <div className="font-label-mono text-label-mono text-outline uppercase tracking-wider">{item.label}</div>
+                        <div className="font-label-mono text-label-mono text-secondary font-bold uppercase tracking-wider">{item.label}</div>
                         <div className="font-body-md text-body-md text-primary group-hover:text-secondary transition-colors">{item.value}</div>
                       </div>
                     </a>
@@ -321,7 +321,7 @@ export default async function HomePage() {
 
               {/* Right — form */}
               <div className="bg-surface-container-lowest border border-outline-variant rounded p-lg md:p-xl relative corner-bracket">
-                <div className="font-label-mono text-label-mono text-outline mb-md uppercase tracking-wider flex items-center gap-sm">
+                <div className="font-label-mono text-label-mono text-secondary font-bold mb-md uppercase tracking-wider flex items-center gap-sm">
                   <span className="w-2 h-2 bg-secondary-container rounded-full animate-pulse-dot" />
                   Direct Inquiry Form — REF: CL-CI-24
                 </div>

@@ -189,7 +189,7 @@ export default async function ProjectDetailPage({ params }) {
               <div className="bg-surface-container-lowest border border-outline-variant rounded sticky top-24">
                 <div className="border-b border-outline-variant px-lg py-md flex justify-between items-center">
                   <h2 className="font-headline-sm text-headline-sm text-primary">System Specs</h2>
-                  <span className="font-label-mono text-label-mono text-outline">SPEC-01</span>
+                  <span className="font-label-mono text-label-mono text-secondary font-bold">SPEC-01</span>
                 </div>
                 {project.specifications?.length > 0 ? (
                   <ul className="divide-y divide-outline-variant">
