@@ -81,7 +81,7 @@ export default function RootLayout({ children }) {
       '@type': 'ContactPoint',
       telephone: '+94 71 83 52 747',
       contactType: 'customer service',
-      email: 'rangana@cadlankaeng.com',
+      email: 'pr@cadlankaeng.com',
       availableLanguage: ['English', 'Sinhala'],
     },
     areaServed: ['Norway', 'United Kingdom', 'Sri Lanka', 'Worldwide'],

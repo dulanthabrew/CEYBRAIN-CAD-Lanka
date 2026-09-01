@@ -25,7 +25,7 @@ export async function POST(request) {
       return Response.json({ error: validationErrors.join(' ') }, { status: 400 });
     }
 
-    const toEmail = process.env.CONTACT_EMAIL_TO || 'rangana@cadlankaeng.com';
+    const toEmail = process.env.CONTACT_EMAIL_TO || 'pr@cadlankaeng.com';
     const fromEmail = process.env.CONTACT_EMAIL_FROM || 'noreply@cadlankaeng.com';
 
     // Send email via Resend (server-side only)

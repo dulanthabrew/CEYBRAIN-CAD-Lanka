@@ -132,7 +132,7 @@ export default async function HomePage() {
   }
 
   const contact = siteSettings?.contactInfo || {
-    email: 'rangana@cadlankaeng.com',
+    email: 'pr@cadlankaeng.com',
     phone: '+94 71 83 52 747',
     whatsapp: '+94 71 83 52 747',
   };
@@ -273,8 +273,8 @@ export default async function HomePage() {
                   {[
                     {
                       label: 'Email',
-                      value: contact.email || 'rangana@cadlankaeng.com',
-                      href: `mailto:${contact.email || 'rangana@cadlankaeng.com'}`,
+                      value: contact.email || 'pr@cadlankaeng.com',
+                      href: `mailto:${contact.email || 'pr@cadlankaeng.com'}`,
                       icon: (
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
                           <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>

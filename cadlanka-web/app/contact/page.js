@@ -21,7 +21,7 @@ export default async function ContactPage() {
   }
 
   const contact = siteSettings?.contactInfo || {
-    email: 'rangana@cadlankaeng.com',
+    email: 'pr@cadlankaeng.com',
     phone: '+94 71 83 52 747',
     whatsapp: '+94 71 83 52 747',
     address: '126 A Padagoda, Beruwala, Sri Lanka',

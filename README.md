@@ -102,7 +102,7 @@ SANITY_API_TOKEN=your_sanity_token
 
 # Contact Form / Email (Resend)
 RESEND_API_KEY=your_resend_api_key
-CONTACT_EMAIL_TO=rangana@cadlankaeng.com
+CONTACT_EMAIL_TO=pr@cadlankaeng.com
 CONTACT_EMAIL_FROM=noreply@cadlankaeng.com
 ```
 
