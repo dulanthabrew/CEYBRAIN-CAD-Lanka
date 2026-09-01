@@ -98,12 +98,12 @@ export default function HeroCarousel() {
 
         {/* H1 */}
         <h1 className="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white max-w-4xl mb-md leading-tight">
-          Precision Engineering for Global Railway Infrastructure.
+          Railway Electrification &bull; Mechanical Design &bull; MEP Drawings &bull; CAD Engineering &bull; Technical Documentation
         </h1>
 
         {/* Subheadline */}
-        <p className="font-body-lg text-body-lg text-primary-fixed-dim max-w-2xl mb-lg border-l-2 border-secondary pl-md">
-          Specializing in Overhead Line Electrification, Mechanical Design, and International Collaboration since 2014.
+        <p className="font-body-lg text-body-lg text-primary-fixed-dim max-w-3xl mb-lg border-l-2 border-secondary pl-md">
+          CAD Lanka Engineering is an engineering design and CAD/BIM service company providing professional technical drawing, 3D modelling and engineering documentation solutions for railway, MEP, mechanical and infrastructure projects.
         </p>
 
         {/* CTAs — Centered on mobile (§20.2), left-aligned on desktop */}
