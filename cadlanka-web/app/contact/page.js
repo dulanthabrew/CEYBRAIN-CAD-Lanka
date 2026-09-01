@@ -27,6 +27,10 @@ export default async function ContactPage() {
     address: '126 A Padagoda, Beruwala, Sri Lanka',
   };
 
+  const encodedAddress = encodeURIComponent(contact.address || '126 A Padagoda, Beruwala, Sri Lanka');
+  const googleMapsEmbedUrl = `https://maps.google.com/maps?q=${encodedAddress}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
+  const googleMapsExternalUrl = `https://www.google.com/maps/search/?api=1&query=${encodedAddress}`;
+
   return (
     <>
       <Header />
@@ -56,6 +60,7 @@ export default async function ContactPage() {
         </header>
 
         <div className="max-w-content mx-auto px-margin-mobile md:px-margin-desktop py-xl">
+          {/* Contact grid: Sidebar + Form */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-xl">
 
             {/* Left sidebar — HQ info + network links */}
@@ -71,7 +76,16 @@ export default async function ContactPage() {
                 <div className="flex flex-col gap-md font-body-sm text-body-sm text-on-surface-variant">
                   <div>
                     <div className="font-label-mono text-label-mono text-outline uppercase tracking-wider mb-xs">Address</div>
-                    <p className="whitespace-pre-line">{contact.address}</p>
+                    <p className="whitespace-pre-line font-medium text-primary">{contact.address}</p>
+                    <a
+                      href={googleMapsExternalUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-xs font-label-mono text-[11px] text-secondary hover:underline mt-xs"
+                    >
+                      <span>View on Google Maps</span>
+                      <span>↗</span>
+                    </a>
                   </div>
                   <div>
                     <div className="font-label-mono text-label-mono text-outline uppercase tracking-wider mb-xs">Email</div>
@@ -103,7 +117,7 @@ export default async function ContactPage() {
                 </div>
               </div>
 
-              {/* Global Network — Norway + UK only (§3.4) */}
+              {/* Global Network — Norway + UK only */}
               <div className="bg-surface-container-lowest border border-outline-variant rounded p-lg">
                 <div className="flex justify-between items-start mb-md">
                   <h2 className="font-headline-sm text-headline-sm text-primary">Global Network</h2>
@@ -164,6 +178,57 @@ export default async function ContactPage() {
               <ContactForm />
             </div>
           </div>
+
+          {/* Location / Google Map Section */}
+          <section className="mt-xl pt-lg border-t border-outline-variant/80" aria-label="Head Office Location Map">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-sm mb-md">
+              <div>
+                <div className="flex items-center gap-xs font-label-mono text-label-mono text-outline text-[11px] uppercase tracking-wider mb-xs">
+                  <span className="w-2 h-2 bg-secondary rounded-full" />
+                  <span>GEO LOCATION // HEADQUARTERS</span>
+                </div>
+                <h2 className="font-headline-md text-headline-md text-primary">Office Location</h2>
+              </div>
+              <div className="flex items-center gap-md">
+                <span className="font-label-mono text-[11px] text-outline hidden sm:inline">
+                  BERUWALA, SRI LANKA
+                </span>
+                <a
+                  href={googleMapsExternalUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-label-mono text-label-mono text-xs px-sm py-xs rounded border border-outline-variant bg-surface-container-low text-primary hover:border-secondary hover:text-secondary transition-colors inline-flex items-center gap-xs"
+                >
+                  <span>Open in Google Maps</span>
+                  <span>↗</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Map Frame */}
+            <div className="relative w-full h-[380px] md:h-[450px] rounded border border-outline-variant bg-surface-container-low overflow-hidden shadow-tech">
+              <iframe
+                title="CAD Lanka Engineering Head Office Location Map"
+                src={googleMapsEmbedUrl}
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full filter contrast-[1.02]"
+              />
+              {/* Overlay Location Badge */}
+              <div className="absolute bottom-4 left-4 bg-primary/95 text-on-primary backdrop-blur-sm border border-outline-variant/60 rounded p-sm md:p-md shadow-lg max-w-sm hidden sm:block">
+                <div className="font-label-mono text-[10px] text-secondary-container uppercase tracking-wider mb-xs">
+                  CAD LANKA ENGINEERING (PVT) LTD
+                </div>
+                <div className="font-body-sm text-body-sm text-on-primary">
+                  {contact.address}
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </main>
       <Footer />
