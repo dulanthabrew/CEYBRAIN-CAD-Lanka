@@ -43,6 +43,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# dev only routes & one-off migration scripts
+# dev only routes, guides & one-off migration scripts
 /app/dev/
 /scripts/
+CLIENT_USER_GUIDE.md
+*USER_GUIDE.md

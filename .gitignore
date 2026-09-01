@@ -48,6 +48,9 @@ next-env.d.ts
 instructions/
 resources/
 DESIGN.md
+CLIENT_USER_GUIDE.md
+cadlanka-web/CLIENT_USER_GUIDE.md
+*USER_GUIDE.md
 
 # Development-only scripts and testing routes (excluded from handover)
 cadlanka-web/scripts/
