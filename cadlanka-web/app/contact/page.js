@@ -27,9 +27,9 @@ export default async function ContactPage() {
     address: '126 A Padagoda, Beruwala, Sri Lanka',
   };
 
-  const encodedAddress = encodeURIComponent(contact.address || '126 A Padagoda, Beruwala, Sri Lanka');
-  const googleMapsEmbedUrl = `https://maps.google.com/maps?q=${encodedAddress}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
-  const googleMapsExternalUrl = `https://www.google.com/maps/search/?api=1&query=${encodedAddress}`;
+  const placeName = 'CAD Lanka Engineering (Pvt) Ltd';
+  const googleMapsExternalUrl = 'https://maps.app.goo.gl/ArHbrNfiKDi2pnSCA';
+  const googleMapsEmbedUrl = 'https://maps.google.com/maps?q=CAD+Lanka+Engineering+(Pvt)+Ltd,+Padagoda,+Beruwala,+Sri+Lanka&t=&z=16&ie=UTF8&iwloc=&output=embed';
 
   return (
     <>
@@ -75,8 +75,12 @@ export default async function ContactPage() {
                 <div className="dimension-line mb-md" />
                 <div className="flex flex-col gap-md font-body-sm text-body-sm text-on-surface-variant">
                   <div>
+                    <div className="font-label-mono text-label-mono text-outline uppercase tracking-wider mb-xs">Company</div>
+                    <p className="font-bold text-primary">{placeName}</p>
+                  </div>
+                  <div>
                     <div className="font-label-mono text-label-mono text-outline uppercase tracking-wider mb-xs">Address</div>
-                    <p className="whitespace-pre-line font-medium text-primary">{contact.address}</p>
+                    <p className="whitespace-pre-line text-on-surface-variant">{contact.address}</p>
                     <a
                       href={googleMapsExternalUrl}
                       target="_blank"
@@ -187,7 +191,7 @@ export default async function ContactPage() {
                   <span className="w-2 h-2 bg-secondary rounded-full" />
                   <span>GEO LOCATION // HEADQUARTERS</span>
                 </div>
-                <h2 className="font-headline-md text-headline-md text-primary">Office Location</h2>
+                <h2 className="font-headline-md text-headline-md text-primary">{placeName}</h2>
               </div>
               <div className="flex items-center gap-md">
                 <span className="font-label-mono text-[11px] text-outline hidden sm:inline">
@@ -208,7 +212,7 @@ export default async function ContactPage() {
             {/* Map Frame */}
             <div className="relative w-full h-[380px] md:h-[450px] rounded border border-outline-variant bg-surface-container-low overflow-hidden shadow-tech">
               <iframe
-                title="CAD Lanka Engineering Head Office Location Map"
+                title="CAD Lanka Engineering (Pvt) Ltd Location Map"
                 src={googleMapsEmbedUrl}
                 width="100%"
                 height="100%"
@@ -221,11 +225,20 @@ export default async function ContactPage() {
               {/* Overlay Location Badge */}
               <div className="absolute bottom-4 left-4 bg-primary/95 text-on-primary backdrop-blur-sm border border-outline-variant/60 rounded p-sm md:p-md shadow-lg max-w-sm hidden sm:block">
                 <div className="font-label-mono text-[10px] text-secondary-container uppercase tracking-wider mb-xs">
-                  CAD LANKA ENGINEERING (PVT) LTD
+                  {placeName}
                 </div>
                 <div className="font-body-sm text-body-sm text-on-primary">
                   {contact.address}
                 </div>
+                <a
+                  href={googleMapsExternalUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-xs font-label-mono text-[10px] text-secondary-container hover:underline mt-xs"
+                >
+                  <span>Get Directions</span>
+                  <span>↗</span>
+                </a>
               </div>
             </div>
           </section>
