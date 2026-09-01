@@ -15,7 +15,7 @@ export default function PartnerLogos({ logos = [] }) {
 
   return (
     <section
-      className="py-lg px-margin-mobile md:px-margin-desktop bg-surface-container-lowest border-y border-outline-variant"
+      className="py-lg px-margin-mobile md:px-margin-desktop bg-surface-container-lowest border-b border-outline-variant"
       aria-label="Trusted Industry Partners and Collaborators"
     >
       <div className="max-w-content mx-auto">

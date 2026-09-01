@@ -148,7 +148,7 @@ export default async function HomePage() {
         <AnimatedStats stats={siteSettings?.stats} />
 
         {/* ── 3. Core Services — 5 real services with clean balanced layout (§3.2 & §22.2) ── */}
-        <section className="py-xl px-margin-mobile md:px-margin-desktop bg-blueprint" aria-labelledby="services-heading">
+        <section className="py-xl px-margin-mobile md:px-margin-desktop bg-surface border-b border-outline-variant" aria-labelledby="services-heading">
           <div className="max-w-content mx-auto">
             {/* Section header */}
             <div className="flex justify-between items-end mb-lg border-b border-outline-variant pb-md">
@@ -249,7 +249,7 @@ export default async function HomePage() {
         </section>
 
         {/* ── 5. Home Contact Section per §3.1 & §22.5 ── */}
-        <section className="py-xl px-margin-mobile md:px-margin-desktop bg-blueprint border-t border-outline-variant" aria-labelledby="home-contact-heading">
+        <section className="py-xl px-margin-mobile md:px-margin-desktop bg-surface border-t border-outline-variant" aria-labelledby="home-contact-heading">
           <ScrollReveal>
             <div className="max-w-content mx-auto grid grid-cols-1 lg:grid-cols-2 gap-xl">
 
