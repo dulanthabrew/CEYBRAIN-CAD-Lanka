@@ -3,32 +3,31 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import Link from 'next/link';
 
-// Royalty-free Unsplash railway/engineering photography
-// Width=1920 for crisp full-bleed display
+// Official CAD Lanka Engineering client project images
 const SLIDES = [
   {
     id: 0,
     refId: 'CL-OLE-01',
-    src: 'https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=1920&q=80&auto=format&fit=crop',
-    alt: 'Overhead railway electrification infrastructure — steel catenary wires converging against sky',
+    src: '/images/hero/hero-slide-1.webp',
+    alt: 'CAD Lanka Engineering — 3D CAD modeling and railway overhead electrification engineering',
   },
   {
     id: 1,
     refId: 'CL-RLY-02',
-    src: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1920&q=80&auto=format&fit=crop',
-    alt: 'Modern railway track infrastructure at dusk with precision engineering',
+    src: '/images/hero/hero-slide-2.webp',
+    alt: 'CAD Lanka Engineering — Precision 2D technical drawings and engineering drafting',
   },
   {
     id: 2,
     refId: 'CL-ME-03',
-    src: 'https://images.unsplash.com/photo-1581092335397-9583eb92d232?w=1920&q=80&auto=format&fit=crop',
-    alt: 'Industrial mechanical engineering precision equipment and components',
+    src: '/images/hero/hero-slide-3.webp',
+    alt: 'CAD Lanka Engineering — Mechanical component CAD design and structural detailing',
   },
   {
     id: 3,
-    refId: 'CL-INF-04',
-    src: 'https://images.unsplash.com/photo-1515165562839-978bbcf18277?w=1920&q=80&auto=format&fit=crop',
-    alt: 'Railway track and infrastructure engineering — structural precision',
+    refId: 'CL-BIM-04',
+    src: '/images/hero/hero-slide-4.webp',
+    alt: 'CAD Lanka Engineering — BIM Revit modeling and infrastructure technical documentation',
   },
 ];
 
