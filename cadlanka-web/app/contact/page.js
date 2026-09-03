@@ -35,8 +35,8 @@ export default async function ContactPage() {
     <>
       <Header />
       <main>
-        {/* Page header */}
-        <header className="bg-blueprint border-b border-outline-variant">
+        {/* Contact Header per §22.5 */}
+        <header className="bg-surface border-b border-outline-variant">
           <div className="max-w-content mx-auto px-margin-mobile md:px-margin-desktop py-lg">
             <Breadcrumb
               items={[

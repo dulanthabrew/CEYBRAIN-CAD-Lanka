@@ -152,7 +152,7 @@ export default async function AboutPage() {
       <Header />
       <main className="flex flex-col gap-xl pb-xl">
         {/* Page header */}
-        <header className="px-margin-mobile md:px-margin-desktop pt-lg bg-blueprint border-b border-outline-variant">
+        <header className="px-margin-mobile md:px-margin-desktop pt-lg bg-surface border-b border-outline-variant">
           <div className="max-w-content mx-auto">
             <Breadcrumb
               items={[
@@ -178,7 +178,6 @@ export default async function AboutPage() {
 
             {/* Timeline / Story — 7 cols */}
             <div className="md:col-span-7 bg-surface-container-lowest border border-outline-variant rounded p-lg relative overflow-hidden flex flex-col justify-between">
-              <div className="absolute inset-0 blueprint-overlay pointer-events-none" />
               <div className="relative z-10 flex flex-col gap-lg">
                 <div className="flex justify-between items-start border-b border-surface-variant pb-sm">
                   <div>
@@ -328,7 +327,7 @@ export default async function AboutPage() {
 
         {/* Why Choose Us */}
         <section className="px-margin-mobile md:px-margin-desktop max-w-content mx-auto w-full">
-          <div className="bg-blueprint border border-outline-variant rounded p-lg md:p-xl">
+          <div className="bg-surface-container-low border border-outline-variant rounded p-lg md:p-xl">
             <div className="text-center max-w-2xl mx-auto mb-lg">
               <span className="font-label-mono text-label-mono text-secondary uppercase tracking-widest block mb-xs">
                 Client Advantage

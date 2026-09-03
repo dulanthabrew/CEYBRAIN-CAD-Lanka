@@ -8,8 +8,8 @@ export default function ProjectsLoading() {
     <>
       <Header />
       <main>
-        {/* Page header */}
-        <header className="bg-blueprint border-b border-outline-variant">
+        {/* Page header skeleton */}
+        <header className="bg-surface border-b border-outline-variant">
           <div className="max-w-content mx-auto px-margin-mobile md:px-margin-desktop py-lg">
             <Breadcrumb
               items={[

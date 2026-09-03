@@ -33,22 +33,14 @@
 
 /* ── Utility Classes ─────────────────────────────────────────────────────── */
 @layer utilities {
-  /* Blueprint grid background with theme safety orange gridlines (#fe6b00) */
+  /* Clean solid blueprint background */
   .bg-blueprint {
     background-color: #f8f9fb;
-    background-image:
-      linear-gradient(rgba(254, 107, 0, 0.16) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(254, 107, 0, 0.16) 1px, transparent 1px);
-    background-size: 32px 32px;
   }
 
-  /* Blueprint grid on dark backgrounds with theme safety orange gridlines */
+  /* Clean solid blueprint background on dark */
   .bg-blueprint-dark {
     background-color: #051625;
-    background-image:
-      linear-gradient(rgba(254, 107, 0, 0.22) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(254, 107, 0, 0.22) 1px, transparent 1px);
-    background-size: 32px 32px;
   }
 
   /* Slide-in-right animation for mobile drawer items */
@@ -111,11 +103,9 @@
     transform: translate(-1px, -1px);
   }
 
-  /* Blueprint dot overlay in theme safety orange */
+  /* Blueprint overlay */
   .blueprint-overlay {
-    background-image: radial-gradient(#fe6b00 1px, transparent 1px);
-    background-size: 16px 16px;
-    opacity: 0.12;
+    display: none;
   }
 
   /* Engineering corner brackets (decorative) */

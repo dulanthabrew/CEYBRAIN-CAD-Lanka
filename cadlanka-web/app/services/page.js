@@ -89,7 +89,7 @@ export default async function ServicesPage() {
       <Header />
       <main>
         {/* Page header */}
-        <header className="relative bg-blueprint border-b border-outline-variant overflow-hidden">
+        <header className="relative bg-surface border-b border-outline-variant overflow-hidden">
           <div className="max-w-content mx-auto px-margin-mobile md:px-margin-desktop py-xl">
             <Breadcrumb
               items={[

@@ -89,7 +89,7 @@ export default function ProjectDetailSkeleton() {
           {/* Sidebar — System Specifications skeleton */}
           <div className="flex flex-col gap-lg">
             <div className="bg-surface-container-lowest border border-outline-variant rounded sticky top-24 overflow-hidden">
-              <div className="border-b border-outline-variant px-lg py-md flex justify-between items-center bg-blueprint">
+              <div className="border-b border-outline-variant px-lg py-md flex justify-between items-center bg-surface">
                 <div className="w-28 h-5 bg-outline-variant/50 rounded-sm" />
                 <div className="w-16 h-4 bg-outline-variant/30 rounded-sm" />
               </div>

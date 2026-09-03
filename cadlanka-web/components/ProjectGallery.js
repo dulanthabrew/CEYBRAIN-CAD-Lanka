@@ -103,7 +103,7 @@ export default function ProjectGallery({ gallery = [] }) {
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal header */}
-            <div className="border-b border-outline-variant px-md py-sm flex justify-between items-center bg-blueprint">
+            <div className="border-b border-outline-variant px-md py-sm flex justify-between items-center bg-surface">
               <div className="flex items-center gap-xs font-label-mono text-label-mono text-secondary-container">
                 <span className="w-2 h-2 rounded-full bg-secondary-container" />
                 {activeImage.figLabel}

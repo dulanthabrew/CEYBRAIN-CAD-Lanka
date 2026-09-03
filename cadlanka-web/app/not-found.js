@@ -11,7 +11,7 @@ export default function NotFound() {
   return (
     <>
       <Header />
-      <main className="min-h-[60vh] bg-blueprint flex items-center justify-center px-margin-mobile md:px-margin-desktop">
+      <main className="min-h-[60vh] bg-surface flex items-center justify-center px-margin-mobile md:px-margin-desktop">
         <div className="text-center max-w-lg border border-outline-variant bg-surface-container-lowest rounded p-xl relative corner-bracket">
           <div className="font-label-mono text-label-mono text-outline uppercase tracking-widest mb-md">
             ERR_404 // ROUTE_NOT_FOUND

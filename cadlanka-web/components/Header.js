@@ -110,7 +110,7 @@ export default function Header() {
 
       {/* Mobile navigation drawer — §15.5 visual redesign & §16 fix */}
       {mobileOpen && (
-        <div className="md:hidden fixed inset-0 top-20 z-40 bg-primary/95 bg-blueprint-dark backdrop-blur-lg border-t border-on-primary-container flex flex-col justify-between pb-xl">
+        <div className="md:hidden fixed inset-0 top-20 z-40 bg-primary/98 backdrop-blur-lg border-t border-on-primary-container flex flex-col justify-between pb-xl">
           <div>
             <ul className="flex flex-col w-full">
               {NAV_LINKS.map(({ label, href }, idx) => {
