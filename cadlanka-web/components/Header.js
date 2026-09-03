@@ -18,6 +18,7 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
+  // Scroll listener for sticky header background
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -26,16 +27,33 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Lock body scroll when mobile menu is open to prevent background wash/bleed
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileOpen]);
+
+  // Close mobile drawer on route change
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [pathname]);
+
   return (
     <>
       <nav
         className={`sticky top-0 z-50 w-full h-20 flex items-center justify-between px-margin-mobile md:px-margin-desktop transition-all duration-300 ${
           scrolled
-            ? 'bg-primary/90 backdrop-blur-md border-b border-on-primary-container/40 shadow-lg'
+            ? 'bg-primary border-b border-on-primary-container/40 shadow-lg'
             : 'bg-primary border-b border-on-primary-container'
         }`}
       >
-        {/* Real Logo — §22.4 Next.js Image with SEO alt text and priority */}
+        {/* Real Logo — Next.js Image with SEO alt text and priority */}
         <Link
           href="/"
           className="flex items-center hover:opacity-90 transition-opacity"
@@ -65,7 +83,7 @@ export default function Header() {
                 >
                   <span>{label}</span>
 
-                  {/* 2px Safety Orange animated underline bar — §14.5 */}
+                  {/* 2px Safety Orange animated underline bar */}
                   <span
                     className={`absolute bottom-0 left-sm right-sm h-[2px] bg-secondary-container transition-all duration-200 ease-out origin-left ${
                       isActive
@@ -79,7 +97,7 @@ export default function Header() {
           })}
         </ul>
 
-        {/* "Get a Quote" CTA — Safety Orange, every page per §2.5 */}
+        {/* "Get a Quote" CTA — Safety Orange */}
         <div className="hidden md:block">
           <Link
             href="/contact"
@@ -108,9 +126,9 @@ export default function Header() {
         </button>
       </nav>
 
-      {/* Mobile navigation drawer — §15.5 visual redesign & §16 fix */}
+      {/* Mobile navigation drawer — 100% Solid Deep Navy for crisp contrast across all pages */}
       {mobileOpen && (
-        <div className="md:hidden fixed inset-0 top-20 z-40 bg-primary/98 backdrop-blur-lg border-t border-on-primary-container flex flex-col justify-between pb-xl">
+        <div className="md:hidden fixed inset-0 top-20 z-50 bg-[#051625] border-t border-on-primary-container flex flex-col justify-between pb-xl overflow-y-auto">
           <div>
             <ul className="flex flex-col w-full">
               {NAV_LINKS.map(({ label, href }, idx) => {
@@ -119,17 +137,18 @@ export default function Header() {
                 return (
                   <li
                     key={href}
-                    className="border-b border-on-primary-container/40 relative animate-slide-in-right"
-                    style={{ animationDelay: `${idx * 60}ms` }}
+                    className={`border-b border-on-primary-container/30 relative transition-colors ${
+                      isActive ? 'bg-primary-container/60' : 'hover:bg-primary-container/30'
+                    }`}
                   >
                     <Link
                       href={href}
                       onClick={() => setMobileOpen(false)}
                       className={`group relative flex items-center justify-between px-margin-mobile py-lg font-button-text text-button-text transition-colors ${
-                        isActive ? 'text-secondary-container font-semibold' : 'text-on-primary hover:text-secondary-container'
+                        isActive ? 'text-secondary-container font-semibold' : 'text-white hover:text-secondary-container'
                       }`}
                     >
-                      {/* Left vertical Safety Orange indicator — §14.5 */}
+                      {/* Left vertical Safety Orange indicator */}
                       <span
                         className={`absolute left-0 top-0 bottom-0 w-[4px] bg-secondary-container transition-all duration-200 ease-out ${
                           isActive
@@ -137,8 +156,14 @@ export default function Header() {
                             : 'opacity-0 scale-y-0 group-hover:opacity-50 group-hover:scale-y-100'
                         }`}
                       />
-                      <span className="text-body-lg uppercase tracking-wider">{label}</span>
-                      <span className="font-label-mono text-label-mono text-outline group-hover:text-secondary-container transition-colors">
+                      <span className="text-body-lg uppercase tracking-wider font-semibold text-white">
+                        {label}
+                      </span>
+                      <span
+                        className={`font-label-mono text-label-mono font-bold ${
+                          isActive ? 'text-secondary-container' : 'text-primary-fixed-dim'
+                        } group-hover:text-secondary-container transition-colors`}
+                      >
                         {`${refNum} //`}
                       </span>
                     </Link>
@@ -149,7 +174,7 @@ export default function Header() {
           </div>
 
           {/* CTA & Footer details inside drawer */}
-          <div className="px-margin-mobile pt-lg border-t border-on-primary-container/60 flex flex-col gap-md">
+          <div className="px-margin-mobile pt-lg border-t border-on-primary-container/60 flex flex-col gap-md bg-[#051625]">
             <div className="dimension-line mb-xs" />
             <Link
               href="/contact"
@@ -158,7 +183,7 @@ export default function Header() {
             >
               Get a Quote →
             </Link>
-            <div className="font-label-mono text-label-mono text-outline text-center uppercase tracking-widest text-[11px] pt-xs">
+            <div className="font-label-mono text-label-mono text-primary-fixed-dim text-center uppercase tracking-widest text-[11px] pt-xs">
               CAD Lanka Engineering • Sri Lanka / Norway / UK
             </div>
           </div>
