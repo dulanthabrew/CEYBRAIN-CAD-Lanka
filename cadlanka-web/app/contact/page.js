@@ -27,7 +27,7 @@ export default async function ContactPage() {
     address: '126 A Padagoda, Beruwala, Sri Lanka',
   };
 
-  const placeName = 'CAD Lanka Engineering (Pvt) Ltd';
+  const placeName = 'CAD Lanka Engineering';
   const googleMapsExternalUrl = 'https://maps.app.goo.gl/ArHbrNfiKDi2pnSCA';
   const googleMapsEmbedUrl = 'https://maps.google.com/maps?q=CAD+Lanka+Engineering+(Pvt)+Ltd,+Padagoda,+Beruwala,+Sri+Lanka&t=&z=16&ie=UTF8&iwloc=&output=embed';
 
